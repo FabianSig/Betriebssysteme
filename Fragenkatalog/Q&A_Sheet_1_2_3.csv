@@ -1,0 +1,71 @@
+Frage;Antwort
+Was ist ein Von-Neumann-Rechner und wie unterscheidet er sich von einem Harvard-Rechner?;Ein Von-Neumann-Rechner besteht aus den vier Funktionseinheiten Leitwerk (Control Unit, CU), Rechenwerk (Processing Unit, PU), Speicher (Memory) sowie Ein-/Ausgabe (Input/Output, E/A). Der Harvard-Rechner, der nach der Struktur des Mark-I-Rechners benannt ist, hat im Unterschied zum Von-Neumann-Rechner zwei getrennte Speicher, einen für die Daten und einen für die Maschinenbefehle. Beide Speicher werden auch über einen getrennten Bus mit der CPU verbunden.
+Wozu braucht man in Computern CPU-Register?;Schnelle Speicher, um die Maschinenbefehle auszuführen. Je nach Maschinenbefehl werden eines oder mehrere Register benötigt. Die Maschinenbefehle schreiben ihre Operanden oft in Register oder lesen Operanden aus Registern. Benennung je nach Typ z.B. Integerregister, Universalregister, Gleitkommaregister, Datenregister, Segmentregister usw.
+Was ist ein Program Status Word (PSW) und wozu wird es verwendet?;Statusregister für Vergleichsoperationen und weitere Kontrollbits z.B. aktueller Status der Rechneranlage 
+Was ist ein Mehrzweck- oder Universalbetriebssystem?;Betriebssystem für verscheidenste Anwendung (überwiegend betriebliche und verwaltungstechnische Aufgabenstellungen, eher weniger für Realzeitprobleme) -> keine Realtime-Eigenschaften
+Was ist ein Mehrkernprozessor?;Mehrere vollständige CPUs, viele Ressourcen (Ausnahme Bus und einige Caches) repliziert
+Welche Unix-Standards kennen Sie und was ist standardisiert?;XPG (OpenGroup), SVID (System V), POSIX (IEEE) und SUS (The Single Unix Specification). Standardisierung der Schnittstellen (Kommandoschnittstelle, Programmschnittstellen für Kerndienste)
+Was versteht man unter einem Mikrokern?;Enthält einen leichtgewichtigen Kernel, Entlastung durch Auslagerungen von Serverprozesse (Funktionalität in Anwendungsprozesse), Kernel übernimmt Abwicklung der Komminikation zwischen Client- und Serverprozessen. Zugriff (Request): Clientprozesse <-> Service-Request-Schnittstelle <-> Mikrokern <-> Awendungsprozess [Serverprozess]
+Nennen Sie ein Beispiel für ein Betriebssystem mit Mikrokern-Achitektur!;Mach von der Carnegy Mellon University (CMU), Mac OS X, Hurt, L4, Amoeba, Chorus
+Nennen Sie vier Betriebsmittel, welche das Betriebssystem verwaltet! Welche davon sind hardware- und welche software-technische Betriebsmittel?;Speicher (Hardware), Prozessor (Hardware), Gerät (Hardware), Datei (Software), Nachricht (Software), Prozess (Software)
+Erläutern Sie den Unterschied zwischen Teilnehmer- und Teilhaberbetrieb! In welcher Betriebsart wird üblicherweise ein Transaktionsmonitor eingesetzt?;Teilnehmerbetrieb: Jeder Anwender eigenen Benutzerprozess und weitere Betriebsmittel. Anmeldung einen Login-Dialog. Teilhaberbetrieb: Zuteilung von Prozesse und Betriebsmittel über Transaktionsmonitor (effiziente Verteilung an die Benutzer, so als hätte der Benutzer eigenen Prozess zugeordnet bekommen). Ideal für dialogorientierte Programme (kurze und schnelle Transaktionen) z.B. Buchungssystem für Flugbuchungen.  
+Welche Aufgaben erfüllt ein Transaktionsmonitor, welche ein ApplicationServer?;Transaktionsmonitor (im Teilhaberbetrieb): Dienstprogramm oberhalb des Kernels. Übernimmt Zugangskontrolle, Verteilung der Anfragen auf bereitgestelle Prozesse, Opitmierung der Zugriffe, Verwaltung der Ressourcen, Zuordnung von Datenbankverbindungen. Application Server: Ähnliche Aufgaben wie der Transaktionsmonitor, aber keine Transaktionsprogramme sondern verteile Anwendungen.
+Nennen Sie Vorteile der Schichtenarchitektur bei Betriebssystemen!;Abhängigkeiten der Hardware in einer Schicht gekapselt -> erleichterte Portierung auf eine andere Hardwareplattform
+Verfügen die Betriebssysteme Unix und Windows 2000/XP über Mikrokern-Architekturen? Wenn nein, wie sind sie konzipiert?;Keine echten Mikrokern-Architekturen. Windows & Unix -> meist schichtorientierte Architektur. Windows -> Nutzt Konzept des Mikrokerns, Subsysteme, und Systemservices sind in den Benutzermodus ausgelagert.
+Was bezeichnet man als Timesharing?;Zuordnung des Prozessors nach Zeitintervallen an die nebenläufigen Programme
+Wozu verwendet man Embedded Systeme?;Rechner oder Steuerungssystem, das in Geräten (Telefon, DCD-Player, Waschmaschinen, Fernseher), Robotorn oder Fahrzeugen eingebaut ist. Ausführung der Aufgabe meist unsichtbar. Geschlossenes System mit dedizierte Aufgabe. Klein, da wenig Ressourcen -> deswegen oft kein Betriebssystem -> direkte Bedienung der Hardwareschnittstellen. Sind Echtzeitsysteme. 
+Nennen Sie ein Beispiel für Embedded Systeme!;Geräte (Telefon, DCD-Player, Waschmaschinen, Fernseher), Robotorn oder Fahrzeugen
+Wozu dient ein Terminalserver?; Bedienen "dumme" Clientrechner (sog. Thin Clients). Anwendungsprogramme laufen vollständig in Servern ab. Clientrechner nur noch für Präsentation. Zentralisierung von Betriebsmitteln, um beteiligte Systeme leichter administrieren zu können. Anwender arbeitet mit gewohnten Benutzeroberfläche, Anwendung läuft aber komplett am Server ab. Bildschirmänderungen werden im Client dargestellt. Je nach Leistungsfähigkeiten mehrere oder viele Benutzer.
+Was ist der Unterschied zwischen Emulation und Virtualisierung?;
+Was ist der Unterschied zwischen Polling und interruptgesteuerter Verarbeitung?;
+Wozu dient der System Call und wie wird er üblicherweise von einem Betriebssystem wie Windows oder Unix ausgeführt?;
+Was bedeutet Maskierung von Unterbrechungsanforderungen?;
+Wie erkennt die CPU, daß eine Unterbrechungsanforderung ansteht?;
+Was versteht man unter einer Interrupt-Vektor-Tabelle?;
+Was ist eine Interrupt-Service-Routine und wann wird sie aufgerufen?;
+Was bedeuetet Interrupt-Sharing?;
+Erläutern Sie die Abwicklung eines Hardware-Interrupts unter Linux!;
+Erläutern Sie die Behandlung eines System Calls!;
+Erläutern Sie den Unterschied zwischen einem synchronen und einem asynchronen Interrupt!;
+Welche Aufgabe hat ein Interrupt-Controller?;
+Was ist in der Prozessverwaltung ein PCB, wozu dient er und welche Inhalte hat er?;
+Nennen Sie dabei drei wichtige Informationen, die im PCB verwaltet werden!;
+Was versteht man unter einem Thread? Wie verhalten sich Threads zu Prozessen im Hinblick auf die Nutzung des Prozessadressraums?;
+Beschreiben Sie den groben Ablauf eines Prozess-Kontextwechsels!;
+Erläutern Sie, warum ein Thread-Kontextwechsel schneller sein kann als ein Prozess-Kontextwechsels!;
+Was bedeutet eine 1:n-Beziehung zwischen Prozess und Thread?;
+Warum ist der Einsatz von Threads sinnvoll?;
+Beschreiben Sie einen einfachen Zustandsautomaten eines Prozesses!;
+Erläutern Sie die Prozesshierarchie unter Unix!;
+Was ist ein Zombie-Prozess unter Unix?;
+Welche Scheduling-Algorithmen sind für Echtzeitbetriebssysteme sinnvoll? Begründen Sie!;
+Welche Aufgaben haben im Prozess-Management der Dispatcher und derScheduler?;
+Nennen Sie jeweils zwei geeignete Scheduling-Verfahren für Batch- undDialog-Systeme und erläutern Sie diese kurz!;
+Erläutern Sie den Unterschied zwischen preemptive und non-preemptive Scheduling und nennen Sie jeweils zwei Scheduling-Strategien, die in diese Kategorien passen!;
+Wie funktioniert der RR-Scheduling-Algorithmus?;
+Warum ist der Scheduling-Algorithmus SRTF (Shortest Remaining Time First) kaum zu realisieren?;
+Welche grundlegenden Gedanken stecken hinter dem Konzept des virtuellen Speichers?;
+Welche Aufgabe hat eine Verdrängungsstrategie und was ist ein Seitenfehler?;
+Welcher Seitenersetzungsalgorithmus wäre theoretisch optimal und warum ist dieser praktisch nur sehr schwer zu realisieren?;
+Warum ist der LRU-Algorithmus zur Seitenersetzung bei der virtuellen Adressierung schwer zu realisieren? Welcher Algorithmus ist eine gute Alternative dazu?;
+Welche Probleme ergeben sich bei sehr großen virtuellen Adressräumen in Bezug auf die Verwaltung der Seitentabellen?;
+Welche Möglichkeiten gibt es die hohe Belastung der Seitentabellenverwaltung insbesondere bei großen Adressräumen zu optimieren?;
+Erläutern Sie die Grundprinzipien des TLB und der invertierten Seitentabelle mit Hashing!;
+Was versteht man unter Shared Memory?;
+Nennen Sie die Einsatzmöglichkeiten von Shared Memory!;
+Was bezeichnet man in der Prozessverwaltung als Blockieren, Verklemmen und Verhungern?;
+Bei Betriebssystemen, bei systemnahen Programmen, aber auch bei Anwendungssoftware muss man sich als Entwickler von nebenläufig auszuführenden Aktionen mit kritischen Abschnitten befassen. Was versteht man unter einem kritischen Abschnitt?;
+Welche Maßnahmen sind zu treffen, daß es beim Durchlaufen eines kritischen Abschnitts nicht zu Inkonsistenzen kommt? Erläutern Sie dabei den Begriff des gegenseitigen Ausschlusses bzw. Mutual Exclusion!;
+Was ist einen Semaphore? Erläutern Sie die Semaphorenoperationen P() und V()!;
+Warum müssen die Semaphoren-Operationen P() und V() selbst wieder ununterbrechbar sein?;
+Welche Auswirkungen hat die folgende falsche Nutzung einer binären Semaphore? V() ... kritischer Abschnitt ... P();
+Welche Auswirkungen hat die folgende falsche Nutzung einer binären Semaphore? P() ... kritischer Abschnitt ... P();
+Welche vier Kriterien sind nach Dijkstra für die Behandlung kritischer Abschnitte zu beachten?;
+Was ist ein Mutex im Sinne der Synchronisation konkurierender Prozesse?;
+Welche Operanden hat ein Test-and-Set-Lock Befehl?;
+Welche Werte können die Operanden eines Test-and-Set-Lock Befehls annehmen und was bedeuten diese?;
+Nennen Sie die vier notwendigen und hinreichenden Bedingungen, die zu einem Deadlock führen!;
+Warum lassen sich Deadlocks bei nebenläufigen Prozessen nur schwer ganz vermeiden?;
+Welche Alternative zur Behandlung von Deadlocks gibt es?;
+Was ist eine Race Condition?;
+Erläutern Sie kurz die Funktionsweise einer Pipe!
