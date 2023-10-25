@@ -63,8 +63,9 @@ Welche vier Kriterien sind nach Dijkstra für die Behandlung kritischer Abschnit
 Was ist ein Mutex im Sinne der Synchronisation konkurierender Prozesse?;
 Welche Operanden hat ein Test-and-Set-Lock Befehl?;
 Welche Werte können die Operanden eines Test-and-Set-Lock Befehls annehmen und was bedeuten diese?;
-Nennen Sie die vier notwendigen und hinreichenden Bedingungen, die zu einem Deadlock führen!;
-Warum lassen sich Deadlocks bei nebenläufigen Prozessen nur schwer ganz vermeiden?;
-Welche Alternative zur Behandlung von Deadlocks gibt es?;
-Was ist eine Race Condition?;
-Erläutern Sie kurz die Funktionsweise einer Pipe!;
+Nennen Sie die vier notwendigen und hinreichenden Bedingungen, die zu einem Deadlock führen!; 1. Mutual Exclusion für die benötigten Betriebsmittel. 2. Prozesse belegen Betriebsmittel und fordern weitere an. 3. Kein Entzug eines Betriebsmittels ist möglich. 4. Zwei oder mehrere Prozesse warten in einer verketteten Liste (in einer Schleife, circular waiting) auf weitere Betriebsmittel.
+Warum lassen sich Deadlocks bei nebenläufigen Prozessen nur schwer ganz vermeiden?; Weil sonst nur jeder Prozess ohne Gefahr eines Deadlocks zum Ablauf kommen dürfte. Alle Betriebsmittel müssten im Vorfeld reserviert werden.
+Welche Alternative zur Behandlung von Deadlocks gibt es?; Betriebsmittelbelegungsgraphen werden eingesetzt, diese Graphen haben als Knoten Ressourcen und Prozesse/Threads enthalten. Zur Beseitigung eines Deadlocks sind das Abbrechen eines Prozesses/Threads oder das Entziehen eines Betriebsmittels möglich
+Was ist eine Race Condition?; Race Conditions sind Situationen, bei denen zwei oder mehr Prozesse gemeinsame Betriebsmittel nutzen und die Endergebnisse der Nutzung von der zeitlichen Reihenfolge der Operationen abhängen
+Erläutern Sie kurz die Funktionsweise einer Pipe! Eine Pipe ist ein Datenstrom von einem Prozess zu einem anderen, dadurch wird ein unidirektionaler Datenstrom bereitgestellt. Die Daten werden ohne Nachrichtenbegrenzer in die Schreibseite eingetragen und von der Leseseite entnommen. Eine Bidirektionale Kommunikation kann über zwei Pipes erreicht werden. Eine Pipe stellt ein Pufferbereich fester Länge dar. Das Auslesen erfolgt durch das FIFO-Prinzip (FirstInFirstOut-Prinzip)
+
