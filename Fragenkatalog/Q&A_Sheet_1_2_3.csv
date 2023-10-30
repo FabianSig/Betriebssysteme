@@ -28,11 +28,11 @@ Erläutern Sie die Behandlung eines System Calls!;
 Erläutern Sie den Unterschied zwischen einem synchronen und einem asynchronen Interrupt!;
 Welche Aufgabe hat ein Interrupt-Controller?;
 Was ist in der Prozessverwaltung ein PCB, wozu dient er und welche Inhalte hat er?;
-Nennen Sie dabei drei wichtige Informationen, die im PCB verwaltet werden!;
-Was versteht man unter einem Thread? Wie verhalten sich Threads zu Prozessen im Hinblick auf die Nutzung des Prozessadressraums?;
-Beschreiben Sie den groben Ablauf eines Prozess-Kontextwechsels!;
-Erläutern Sie, warum ein Thread-Kontextwechsel schneller sein kann als ein Prozess-Kontextwechsels!;
-Was bedeutet eine 1:n-Beziehung zwischen Prozess und Thread?;
+Nennen Sie dabei drei wichtige Informationen, die im PCB verwaltet werden!;- Programmzähler- Prozesszustand- Priorität- Prozessnummer- aktuellen Registerinhalte
+Was versteht man unter einem Thread? Wie verhalten sich Threads zu Prozessen im Hinblick auf die Nutzung des Prozessadressraums?;- Eine nebenläufige Ausführungseinheit innerhalb eines Prozesses.- Threads erhalten den vollen Zugriff auf den zugehörigen Prozessadressraum.
+Beschreiben Sie den groben Ablauf eines Prozess-Kontextwechsels!;- Aktiver Prozess wird unterbrochen.- Prozesskontext (gesamte Information des unterbrochenen Prozesses) wird gesichert- Prozesskontext des neu aktivierten Prozesses wird in die Ablaufumgebung geladen
+Erläutern Sie, warum ein Thread-Kontextwechsel schneller sein kann als ein Prozess-Kontextwechsels!;Weil meist Speicherbereiche des gleichen Prozesses verwendet werden.
+Was bedeutet eine 1:n-Beziehung zwischen Prozess und Thread?;Prozess kann mehrere Threads beherbergen.
 Warum ist der Einsatz von Threads sinnvoll?;Threads sind leichtgewichtiger als Prozesse, wodurch Kontextwechsel innerhalb desselben Prozesses schneller sind.
 Beschreiben Sie einen einfachen Zustandsautomaten eines Prozesses!;Vier Zustände.- „bereit“: Prozess zur Bearbeitung vorbereitet.- „aktiv“: hat eine CPU- „blockiert“: wartet auf Ressourcen, um weitermachen zu können.- „beendet“: Prozess ist dann schon nicht mehr im System vorhanden. 
 Erläutern Sie die Prozesshierarchie unter Unix!;- Baumartige Struktur mit dem init- Prozess als Wurzel (PID 1).- Andere wichtige Prozesse sind swapper (PID 0) und page (PID 2).- Bei der Erzeugung eines Kindprozesses erbt dieser Umgebungseinstellungen, offene Dateien und den Adressraum vom Elternprozess.- Der Kindprozess kann dasselbe Programm ausführen oder ein neues Programm mit dem Systemaufruf execve laden und dadurch das Elternprozess-Programm ersetzen.
