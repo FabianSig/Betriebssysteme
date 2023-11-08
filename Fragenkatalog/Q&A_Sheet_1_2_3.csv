@@ -20,9 +20,9 @@ Was ist der Unterschied zwischen Polling und interruptgesteuerter Verarbeitung?;
 Wozu dient der System Call und wie wird er üblicherweise von einem Betriebssystem wie Windows oder Unix ausgeführt?; Systemcall (auch Software-Interrupt) ist ein synchroner, also vorhersehbarer und reproduzierbar Interrupt. Ist ein Dienstaufruf an das Betriebssystem, bei dessen Ausführung in den Kernelmodus gewechselt wird. Kontrollfluss wird an den Kernel über ein Anwendungsprogramm übergeben.
 Was bedeutet Maskierung von Unterbrechungsanforderungen?;
 Wie erkennt die CPU, daß eine Unterbrechungsanforderung ansteht?;
-Was versteht man unter einer Interrupt-Vektor-Tabelle?;
-Was ist eine Interrupt-Service-Routine und wann wird sie aufgerufen?;
-Was bedeuetet Interrupt-Sharing?;
+Was versteht man unter einer Interrupt-Vektor-Tabelle?;- Tabelle mit Einsprungadressen- Liegt an vordefinierter Stelle im Kernelspeicher
+Was ist eine Interrupt-Service-Routine und wann wird sie aufgerufen?;- Programmstück zur Bearbeitung von Interrupts- Jeder Interrupt Typ hat seine eigene ISR- ISR kann mehreren Interrupt Typen zugeordnet werden- Betriebssystem bietet passende ISRs für alle Interrupts
+Was bedeuetet Interrupt-Sharing?;- Mehrere Geräte teilen sich eine Interrupt-Nummer.- Betriebssystem ermittelt, welches Gerät den Interrupt ausgelöst hat.
 Erläutern Sie die Abwicklung eines Hardware-Interrupts unter Linux!;
 Erläutern Sie die Behandlung eines System Calls!;
 Erläutern Sie den Unterschied zwischen einem synchronen und einem asynchronen Interrupt!;
